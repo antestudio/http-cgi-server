@@ -1,0 +1,16 @@
+#!cgi-bin/lang
+
+program
+
+string remote_addr;
+string remote_port;
+string server;
+
+{
+  remote_addr = $REMOTE_ADDR;
+  remote_port = $REMOTE_PORT;
+  server = $SERVER_SOFTWARE;
+
+  write("<h1>Your IP address is ", remote_addr, "</h1><br>");
+  write("<hr>", server);
+}
